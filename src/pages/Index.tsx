@@ -21,7 +21,7 @@ const Index = () => {
         
         <footer className="py-8 border-t border-border mt-auto">
           <div className="flex flex-col md:flex-row justify-between items-center text-muted-foreground text-sm">
-            <p>© 2023 Zatura. All rights reserved.</p>
+            <p>Apple © 2025. All rights reserved.</p>
           </div>
         </footer>
       </div>
