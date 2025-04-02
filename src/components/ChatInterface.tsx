@@ -66,7 +66,7 @@ const ChatInterface = () => {
 
   return (
     <div 
-      className={`flex flex-col border border-border rounded-2xl shadow-md overflow-hidden bg-card transition-all duration-300 ${
+      className={`flex flex-col rounded-2xl shadow-lg overflow-hidden apple-glass transition-all duration-300 ${
         isFullScreen 
           ? 'fixed inset-0 z-50 rounded-none' 
           : isMobile
@@ -74,26 +74,26 @@ const ChatInterface = () => {
             : 'h-[70vh] w-full'
       }`}
     >
-      <div className="flex justify-between items-center bg-primary text-primary-foreground px-4 py-2">
+      <div className="flex justify-between items-center bg-secondary/80 backdrop-blur-md dark:bg-secondary/50 px-4 py-3">
         <div className="flex-1"></div>
         <div className="flex items-center gap-2">
           <Button 
             variant="ghost" 
             size="icon" 
             onClick={toggleFullScreen}
-            className="text-primary-foreground hover:bg-primary/90"
+            className="text-foreground hover:bg-primary/20"
             aria-label={isFullScreen ? "Exit fullscreen" : "Enter fullscreen"}
           >
-            {isFullScreen ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
+            {isFullScreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
           </Button>
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4 bg-background">
+      <div className="flex-1 overflow-y-auto p-4 bg-background/80 backdrop-blur-sm">
         {messages.length === 0 ? (
           <div className="flex items-center justify-center h-full text-center">
             <div className="max-w-sm">
-              <h3 className="text-xl font-semibold mb-2">How can we help?</h3>
+              <h3 className="text-xl font-medium mb-2">How can we help?</h3>
               <p className="text-muted-foreground">
                 Ask about account issues, billing questions, or any other support topics.
               </p>
@@ -108,13 +108,13 @@ const ChatInterface = () => {
         )}
         {isLoading && (
           <div className="flex justify-center items-center py-4">
-            <Loader2 className="h-6 w-6 animate-spin text-primary" />
+            <Loader2 className="h-5 w-5 animate-spin text-primary" />
           </div>
         )}
         <div ref={messagesEndRef} />
       </div>
       
-      <div className="border-t border-border p-4 bg-muted/30">
+      <div className="border-t border-border/30 p-4 bg-background/50 backdrop-blur-md">
         <SearchBar onSend={handleSendMessage} isLoading={isLoading} />
       </div>
     </div>

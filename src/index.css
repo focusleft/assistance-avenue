@@ -6,15 +6,15 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222.2 47.4% 11.2%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222.2 47.4% 11.2%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 204 100% 40%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -37,32 +37,32 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 12%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 0 0% 17%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 0 0% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 204 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 0 0% 25%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 215 20.2% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 204 100% 40%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
     --ring: 212.7 26.8% 83.9%;
   }
 
@@ -71,6 +71,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   * {
@@ -93,10 +94,15 @@
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Custom Scrollbar */
+/* Apple-inspired glass effect */
+.apple-glass {
+  @apply backdrop-blur-md bg-white/10 dark:bg-black/30 border border-white/20 dark:border-white/10;
+}
+
+/* Custom Scrollbar - Apple style */
 ::-webkit-scrollbar {
-  height: 6px;
-  width: 6px;
+  height: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
