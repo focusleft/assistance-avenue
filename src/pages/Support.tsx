@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom';
 import ChatInterface from '@/components/ChatInterface';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
 const Support = () => {
   const handleEmailSupport = () => {
     window.location.href = 'mailto:support@zatura.com?subject=Support%20Request';
+    toast({
+      title: "Email client opened",
+      description: "Redirecting to your email client to contact support.",
+    });
   };
 
   return (
@@ -18,7 +23,7 @@ const Support = () => {
         <section className="py-12">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold mb-6 text-center text-primary">Insight Ticket Search</h1>
-            <p className="text-primary/80 text-center mb-8">
+            <p className="text-center mb-8 text-primary/80">
               Get help with your Zatura products or services. Our virtual assistant is available 24/7.
             </p>
             

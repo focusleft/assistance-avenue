@@ -21,24 +21,21 @@ const SearchBar = ({ onSend, isLoading }: SearchBarProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full bg-white border border-blue-200 rounded-full px-4 py-2 shadow-sm">
-      <Search className="h-5 w-5 text-blue-400" />
+    <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full bg-background border border-input rounded-full px-4 py-2 shadow-sm">
+      <Search className="h-5 w-5 text-muted-foreground" />
       <Input
         type="text"
         placeholder="Ask a question..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="flex-grow border-0 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 p-0 text-base"
+        className="flex-grow border-0 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 p-0 text-base bg-transparent"
       />
       <Button
         type="submit"
         size="icon"
         disabled={!query.trim() || isLoading}
-        className={`rounded-full ${
-          query.trim() && !isLoading 
-            ? 'bg-blue-500 hover:bg-blue-600 text-white' 
-            : 'bg-gray-200 text-gray-500'
-        }`}
+        className="rounded-full"
+        variant={query.trim() && !isLoading ? "default" : "secondary"}
       >
         <Send className="h-4 w-4" />
       </Button>

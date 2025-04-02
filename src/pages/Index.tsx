@@ -4,10 +4,15 @@ import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 
 const Index = () => {
   const handleEmailSupport = () => {
     window.location.href = 'mailto:support@zatura.com?subject=Support%20Request';
+    toast({
+      title: "Email client opened",
+      description: "Redirecting to your email client to contact support.",
+    });
   };
 
   return (
