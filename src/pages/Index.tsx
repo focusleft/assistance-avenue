@@ -16,7 +16,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="flex-grow flex items-center justify-center">
+          <div className="w-full flex-grow flex items-center justify-center">
             <ChatInterface />
           </div>
         </section>

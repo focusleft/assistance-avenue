@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Message } from '@/types';
 import ChatMessage from './ChatMessage';
@@ -70,11 +71,11 @@ const ChatInterface = () => {
           ? 'fixed inset-0 z-50 rounded-none' 
           : isMobile
             ? 'h-[500px] w-full'
-            : 'h-[70vh] w-full max-w-4xl mx-auto'
+            : 'h-[70vh] w-full'
       }`}
     >
       <div className="flex justify-between items-center bg-primary text-primary-foreground px-4 py-2">
-        <h3 className="font-semibold">Insight Support Chat</h3>
+        <div className="flex-1"></div>
         <div className="flex items-center gap-2">
           <Button 
             variant="ghost" 
