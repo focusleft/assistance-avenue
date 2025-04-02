@@ -10,7 +10,7 @@ const Index = () => {
         
         <section id="chat-section" className="py-8 flex-grow flex flex-col">
           <div className="max-w-3xl mx-auto text-center mb-8">
-            <h2 className="text-3xl font-semibold mb-4 text-primary">Insight Ticket Search</h2>
+            <h2 className="text-3xl font-semibold mb-4 text-primary">Insight Support Chat</h2>
             <p className="text-primary/80">
               Easily search Insight Support tickets with case numbers, issue descriptions, or resolution context.
             </p>

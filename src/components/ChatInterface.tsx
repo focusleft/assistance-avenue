@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Message } from '@/types';
 import ChatMessage from './ChatMessage';
@@ -17,14 +16,12 @@ const ChatInterface = () => {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    // Scroll to bottom whenever messages change
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   const handleSendMessage = async (content: string) => {
     if (!content.trim()) return;
 
-    // Create user message
     const userMessage: Message = {
       id: `user-${Date.now()}`,
       content,
@@ -36,27 +33,18 @@ const ChatInterface = () => {
     setIsLoading(true);
 
     try {
-      // First search for relevant tickets
       const searchResults = await searchTickets(content);
-
-      // Then get a system response based on the message
       const systemResponse = await getResponseForMessage(content);
-
-      // Add system response to chat
       setMessages(prev => [...prev, systemResponse]);
     } catch (error) {
       console.error('Error getting response:', error);
-      
-      // Add error message if API call fails
       const errorMessage: Message = {
         id: `error-${Date.now()}`,
         content: 'Sorry, I encountered an error processing your request. Please try again.',
         sender: 'system',
         timestamp: new Date(),
       };
-      
       setMessages(prev => [...prev, errorMessage]);
-      
       toast({
         title: "Error",
         description: "Failed to process your request. Please try again.",
@@ -86,7 +74,7 @@ const ChatInterface = () => {
       }`}
     >
       <div className="flex justify-between items-center bg-primary text-primary-foreground px-4 py-2">
-        <h3 className="font-semibold">Insight Ticket Search</h3>
+        <h3 className="font-semibold">Insight Support Chat</h3>
         <div className="flex items-center gap-2">
           <Button 
             variant="ghost" 

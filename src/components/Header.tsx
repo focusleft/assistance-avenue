@@ -22,7 +22,7 @@ const Header = () => {
     <header className="py-6 flex justify-between items-center">
       <div className="flex items-center">
         <Apple className="h-6 w-6 mr-2 text-primary" />
-        <h2 className="text-2xl font-semibold text-primary">Zatura</h2>
+        <h2 className="text-2xl font-semibold text-primary">Ticksy</h2>
       </div>
       <div className="flex items-center gap-6">
         <nav>
