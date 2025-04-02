@@ -21,8 +21,8 @@ const SearchBar = ({ onSend, isLoading }: SearchBarProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full bg-white border border-gray-200 rounded-full px-4 py-2 shadow-sm">
-      <Search className="h-5 w-5 text-gray-400" />
+    <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full bg-white border border-blue-200 rounded-full px-4 py-2 shadow-sm">
+      <Search className="h-5 w-5 text-blue-400" />
       <Input
         type="text"
         placeholder="Ask a question..."

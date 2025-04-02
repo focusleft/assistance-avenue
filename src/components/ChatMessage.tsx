@@ -49,7 +49,7 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
           className={`px-4 py-3 rounded-2xl ${
             isUser 
               ? 'bg-blue-500 text-white rounded-tr-none' 
-              : 'bg-gray-100 text-gray-800 rounded-tl-none'
+              : 'bg-blue-100 text-gray-800 rounded-tl-none'
           }`}
         >
           {message.content}
@@ -87,7 +87,7 @@ const ChatMessage = ({ message }: ChatMessageProps) => {
       
       {isUser && (
         <div className="flex-shrink-0 ml-3">
-          <UserCircle className="h-8 w-8 rounded-full bg-gray-200 p-1 text-gray-600" />
+          <UserCircle className="h-8 w-8 rounded-full bg-blue-200 p-1 text-blue-600" />
         </div>
       )}
     </div>
