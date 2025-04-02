@@ -12,7 +12,7 @@ const mockSearchResults: SearchResult[] = [
   {
     id: '2',
     title: 'Account billing issues',
-    content: 'If you're experiencing billing issues, please check your payment method in account settings and ensure it's up to date.',
+    content: 'If you\'re experiencing billing issues, please check your payment method in account settings and ensure it\'s up to date.',
     relevanceScore: 0.88,
   },
   {
@@ -69,7 +69,7 @@ export async function getResponseForMessage(message: string): Promise<Message> {
   let content = '';
   
   if (message.toLowerCase().includes('password')) {
-    content = 'To reset your password, please visit the account settings page and select "Reset Password". We'll send you an email with instructions.';
+    content = 'To reset your password, please visit the account settings page and select "Reset Password". We\'ll send you an email with instructions.';
   } else if (message.toLowerCase().includes('billing') || message.toLowerCase().includes('payment')) {
     content = 'For billing inquiries, please check your latest invoice in the account section. If you need further assistance, let me know and I can connect you with our billing department.';
   } else if (message.toLowerCase().includes('return') || message.toLowerCase().includes('refund')) {
