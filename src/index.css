@@ -36,6 +36,13 @@
     --radius: 0.75rem;
   }
 
+  html, body {
+    @apply overflow-x-hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   * {
     @apply border-border;
   }
@@ -56,9 +63,10 @@
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - only for horizontal scrolling */
 ::-webkit-scrollbar {
-  width: 6px;
+  height: 6px;
+  width: 0; /* Remove vertical scrollbar */
 }
 
 ::-webkit-scrollbar-track {

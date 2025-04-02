@@ -1,5 +1,5 @@
 
-import { ArrowDown } from 'lucide-react';
+import { Apple, ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToChat = () => {
@@ -11,10 +11,11 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-[70vh] flex flex-col justify-center items-center text-center px-4 relative">
+      <Apple className="h-16 w-16 mb-6" />
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-        <span className="block">Need assistance?</span>
-        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-          We're here to help.
+        <span className="block">Welcome to Zatura</span>
+        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-slate-700 to-slate-900">
+          Simple. Elegant. Powerful.
         </span>
       </h1>
       
