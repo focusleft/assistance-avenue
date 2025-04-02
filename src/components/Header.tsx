@@ -1,28 +1,43 @@
 
-import { Apple } from 'lucide-react';
+import { Apple, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from 'next-themes';
+import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const location = useLocation();
+  const { theme, setTheme } = useTheme();
   
   const isActive = (path: string) => {
     return location.pathname === path 
-      ? "text-blue-800 font-bold border-b-2 border-blue-500" 
-      : "text-gray-600 hover:text-blue-600";
+      ? "font-bold border-b-2 border-primary" 
+      : "text-foreground/70 hover:text-primary";
   };
 
   return (
     <header className="py-6 flex justify-between items-center">
       <div className="flex items-center">
-        <Apple className="h-6 w-6 mr-2 text-blue-600" />
-        <h2 className="text-2xl font-semibold text-blue-800">Zatura</h2>
+        <Apple className="h-6 w-6 mr-2 text-primary" />
+        <h2 className="text-2xl font-semibold text-primary">Zatura</h2>
       </div>
-      <nav>
-        <ul className="flex space-x-6">
-          <li><Link to="/" className={`${isActive('/')} py-1`}>Home</Link></li>
-          <li><Link to="/support" className={`${isActive('/support')} py-1`}>Support</Link></li>
-        </ul>
-      </nav>
+      <div className="flex items-center gap-6">
+        <nav>
+          <ul className="flex space-x-6">
+            <li><Link to="/" className={`${isActive('/')} py-1`}>Home</Link></li>
+            <li><Link to="/support" className={`${isActive('/support')} py-1`}>Support</Link></li>
+          </ul>
+        </nav>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          className="rounded-full"
+        >
+          <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </div>
     </header>
   );
 };
