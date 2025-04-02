@@ -1,7 +1,6 @@
 
 import ChatInterface from '@/components/ChatInterface';
 import Header from '@/components/Header';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
@@ -45,11 +44,6 @@ const Index = () => {
         <footer className="py-8 border-t border-border mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center text-muted-foreground text-sm">
             <p>© 2023 Zatura. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="hover:text-primary">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-primary">Terms of Service</Link>
-              <Link to="/support" className="hover:text-primary">Support</Link>
-            </div>
           </div>
         </footer>
       </div>

@@ -14,6 +14,10 @@ const Header = () => {
       : "text-foreground/70 hover:text-primary";
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <header className="py-6 flex justify-between items-center">
       <div className="flex items-center">
@@ -30,7 +34,7 @@ const Header = () => {
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          onClick={toggleTheme}
           className="rounded-full"
           aria-label="Toggle theme"
         >
