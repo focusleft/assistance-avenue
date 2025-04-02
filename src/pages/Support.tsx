@@ -1,5 +1,5 @@
 
-import { Apple } from 'lucide-react';
+import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
 import ChatInterface from '@/components/ChatInterface';
 
@@ -7,25 +7,11 @@ const Support = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <header className="py-6 flex justify-between items-center">
-          <div className="flex items-center">
-            <Apple className="h-6 w-6 mr-2" />
-            <h2 className="text-2xl font-semibold text-gray-900">Zatura</h2>
-          </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link></li>
-              <li><Link to="/products" className="text-gray-600 hover:text-gray-900">Products</Link></li>
-              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Services</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link></li>
-              <li><Link to="/support" className="text-gray-600 hover:text-gray-900 font-bold">Support</Link></li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
         
         <section className="py-12">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold mb-6 text-center">Customer Support</h1>
+            <h1 className="text-4xl font-bold mb-6 text-center">Insight Ticket Search</h1>
             <p className="text-gray-600 text-center mb-12">
               Get help with your Zatura products or services. Our virtual assistant is available 24/7.
             </p>

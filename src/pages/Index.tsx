@@ -1,34 +1,17 @@
 
-import HeroSection from '@/components/HeroSection';
 import ChatInterface from '@/components/ChatInterface';
+import Header from '@/components/Header';
 import { Link } from 'react-router-dom';
-import { Apple } from 'lucide-react';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <header className="py-6 flex justify-between items-center">
-          <div className="flex items-center">
-            <Apple className="h-6 w-6 mr-2" />
-            <h2 className="text-2xl font-semibold text-gray-900">Zatura</h2>
-          </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link></li>
-              <li><Link to="/products" className="text-gray-600 hover:text-gray-900">Products</Link></li>
-              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Services</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link></li>
-              <li><Link to="/support" className="text-gray-600 hover:text-gray-900">Support</Link></li>
-            </ul>
-          </nav>
-        </header>
-        
-        <HeroSection />
+        <Header />
         
         <section id="chat-section" className="py-16">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-semibold mb-4">Customer Support</h2>
+            <h2 className="text-3xl font-semibold mb-4">Insight Ticket Search</h2>
             <p className="text-gray-600">
               Ask questions, search for solutions, or get help from our virtual assistant.
             </p>

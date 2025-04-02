@@ -18,9 +18,6 @@ const Header = () => {
       <nav>
         <ul className="flex space-x-6">
           <li><Link to="/" className={isActive('/')}>Home</Link></li>
-          <li><Link to="/products" className={isActive('/products')}>Products</Link></li>
-          <li><Link to="/services" className={isActive('/services')}>Services</Link></li>
-          <li><Link to="/about" className={isActive('/about')}>About</Link></li>
           <li><Link to="/support" className={isActive('/support')}>Support</Link></li>
         </ul>
       </nav>
