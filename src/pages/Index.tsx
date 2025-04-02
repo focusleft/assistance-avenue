@@ -12,7 +12,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-primary">Insight Ticket Search</h2>
             <p className="text-primary/80">
-              Ask questions, search for solutions, or get help from our virtual assistant.
+              Easily search Insight Support tickets with case numbers, issue descriptions, or resolution context.
             </p>
           </div>
           
