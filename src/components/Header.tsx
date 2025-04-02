@@ -28,7 +28,6 @@ const Header = () => {
         <nav>
           <ul className="flex space-x-6">
             <li><Link to="/" className={`${isActive('/')} py-1`}>Home</Link></li>
-            <li><Link to="/support" className={`${isActive('/support')} py-1`}>Support</Link></li>
           </ul>
         </nav>
         <Button
