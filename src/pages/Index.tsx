@@ -4,11 +4,11 @@ import Header from '@/components/Header';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4">
+    <div className="flex flex-col min-h-screen bg-background">
+      <div className="container mx-auto px-4 flex-grow flex flex-col">
         <Header />
         
-        <section id="chat-section" className="py-16">
+        <section id="chat-section" className="py-16 flex-grow">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-semibold mb-4 text-primary">Insight Ticket Search</h2>
             <p className="text-primary/80">
@@ -19,7 +19,7 @@ const Index = () => {
           <ChatInterface />
         </section>
         
-        <footer className="py-8 border-t border-border mt-16">
+        <footer className="py-8 border-t border-border mt-auto">
           <div className="flex flex-col md:flex-row justify-between items-center text-muted-foreground text-sm">
             <p>© 2023 Zatura. All rights reserved.</p>
           </div>
