@@ -1,19 +1,8 @@
 
 import ChatInterface from '@/components/ChatInterface';
 import Header from '@/components/Header';
-import { Button } from '@/components/ui/button';
-import { Mail } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
 
 const Index = () => {
-  const handleEmailSupport = () => {
-    window.location.href = 'mailto:support@zatura.com?subject=Support%20Request';
-    toast({
-      title: "Email client opened",
-      description: "Redirecting to your email client to contact support.",
-    });
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4">
@@ -25,17 +14,6 @@ const Index = () => {
             <p className="text-primary/80">
               Ask questions, search for solutions, or get help from our virtual assistant.
             </p>
-          </div>
-          
-          <div className="flex justify-center mb-6">
-            <Button 
-              onClick={handleEmailSupport}
-              className="flex items-center gap-2"
-              variant="outline"
-            >
-              <Mail className="h-4 w-4" />
-              Contact Support via Email
-            </Button>
           </div>
           
           <ChatInterface />

@@ -4,7 +4,7 @@ import { Message } from '@/types';
 import ChatMessage from './ChatMessage';
 import SearchBar from './SearchBar';
 import { searchTickets, getResponseForMessage } from '@/services/api';
-import { Loader2, Maximize2, Minimize2, Mail } from 'lucide-react';
+import { Loader2, Maximize2, Minimize2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { toast } from '@/hooks/use-toast';
 
@@ -65,14 +65,6 @@ const ChatInterface = () => {
     }
   };
 
-  const handleEmailSupport = () => {
-    window.location.href = 'mailto:support@zatura.com?subject=Support%20Request';
-    toast({
-      title: "Email client opened",
-      description: "Redirecting to your email client to contact support.",
-    });
-  };
-
   const toggleFullScreen = () => {
     setIsFullScreen(!isFullScreen);
     toast({
@@ -92,15 +84,6 @@ const ChatInterface = () => {
       <div className="flex justify-between items-center bg-primary text-primary-foreground px-4 py-2">
         <h3 className="font-semibold">Insight Ticket Search</h3>
         <div className="flex items-center gap-2">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={handleEmailSupport}
-            className="text-primary-foreground hover:bg-primary/90"
-            aria-label="Email support"
-          >
-            <Mail size={20} />
-          </Button>
           <Button 
             variant="ghost" 
             size="icon" 
