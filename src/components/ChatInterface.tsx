@@ -7,12 +7,14 @@ import { searchTickets, getResponseForMessage } from '@/services/api';
 import { Loader2, Maximize2, Minimize2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { toast } from '@/hooks/use-toast';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const ChatInterface = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Scroll to bottom whenever messages change
@@ -78,7 +80,9 @@ const ChatInterface = () => {
       className={`flex flex-col border border-border rounded-2xl shadow-md overflow-hidden bg-card transition-all duration-300 ${
         isFullScreen 
           ? 'fixed inset-0 z-50 rounded-none' 
-          : 'h-[600px] md:h-[500px] w-full max-w-2xl mx-auto'
+          : isMobile
+            ? 'h-[500px] w-full'
+            : 'h-[70vh] w-full max-w-4xl mx-auto'
       }`}
     >
       <div className="flex justify-between items-center bg-primary text-primary-foreground px-4 py-2">

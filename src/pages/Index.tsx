@@ -8,15 +8,17 @@ const Index = () => {
       <div className="container mx-auto px-4 flex-grow flex flex-col">
         <Header />
         
-        <section id="chat-section" className="py-16 flex-grow">
-          <div className="max-w-3xl mx-auto text-center mb-12">
+        <section id="chat-section" className="py-8 flex-grow flex flex-col">
+          <div className="max-w-3xl mx-auto text-center mb-8">
             <h2 className="text-3xl font-semibold mb-4 text-primary">Insight Ticket Search</h2>
             <p className="text-primary/80">
               Easily search Insight Support tickets with case numbers, issue descriptions, or resolution context.
             </p>
           </div>
           
-          <ChatInterface />
+          <div className="flex-grow flex items-center justify-center">
+            <ChatInterface />
+          </div>
         </section>
         
         <footer className="py-8 border-t border-border mt-auto">
